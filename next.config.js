@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig ={
-  output:'export',
+const nextConfig = {
+  output: 'export',
+  // Otras opciones de configuración según sea necesario
 }
+
 module.exports = {
+  ...nextConfig,
   async redirects() {
     return [
       {
@@ -10,6 +13,7 @@ module.exports = {
         destination: '/trabajos/[week]',
         permanent: true,
       },
+      // Puedes agregar más redirecciones según sea necesario
     ];
   },
 };
